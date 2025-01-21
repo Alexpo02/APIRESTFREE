@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/itemOrdenar"
+        android:icon="@drawable/sort"
+        android:title="Ordenar(A - Z)" />
+    <item
+        android:id="@+id/itemQuitarFiltro"
+        android:icon="@drawable/rehacer"
+        android:title="Quitar filtro" />
+</menu>

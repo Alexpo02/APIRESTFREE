@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- ScrollView para el contenido -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnBack">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Nombre del alimento -->
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="Nombre del alimento"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <!-- Sección de propiedades -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:spacing="8dp">
+
+                <!-- Carbohidratos -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="5dp"
+                    android:paddingBottom="16dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Carbohidratos:"
+                        android:textSize="24sp"
+                        android:layout_marginEnd="8dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/tvCarbohydrates"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0g"
+                        android:textSize="24sp" />
+                </LinearLayout>
+
+                <!-- Colesterol -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="5dp"
+                    android:paddingBottom="16dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Colesterol:"
+                        android:textSize="24sp"
+                        android:layout_marginEnd="8dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/tvCholesterol"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0mg"
+                        android:textSize="24sp" />
+                </LinearLayout>
+
+                <!-- Grasas saturadas -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="5dp"
+                    android:paddingBottom="16dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Grasas saturadas:"
+                        android:textSize="24sp"
+                        android:layout_marginEnd="8dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/tvFatSaturated"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0g"
+                        android:textSize="24sp" />
+                </LinearLayout>
+
+                <!-- Grasas totales -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="5dp"
+                    android:paddingBottom="16dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Grasas totales:"
+                        android:textSize="24sp"
+                        android:layout_marginEnd="8dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/tvFatTotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0g"
+                        android:textSize="24sp" />
+                </LinearLayout>
+
+                <!-- Fibra -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="5dp"
+                    android:paddingBottom="16dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fibra:"
+                        android:textSize="24sp"
+                        android:layout_marginEnd="8dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/tvFiber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0g"
+                        android:textSize="24sp" />
+                </LinearLayout>
+
+                <!-- Potasio -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="5dp"
+                    android:paddingBottom="16dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Potasio:"
+                        android:textSize="24sp"
+                        android:layout_marginEnd="8dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/tvPotassium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0mg"
+                        android:textSize="24sp" />
+                </LinearLayout>
+
+                <!-- Sodio -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="5dp"
+                    android:paddingBottom="16dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sodio:"
+                        android:textSize="24sp"
+                        android:layout_marginEnd="8dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/tvSodium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0mg"
+                        android:textSize="24sp" />
+                </LinearLayout>
+
+                <!-- Azúcar -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="5dp"
+                    android:paddingBottom="16dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Azúcar:"
+                        android:textSize="24sp"
+                        android:layout_marginEnd="8dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/tvSugar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0g"
+                        android:textSize="24sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- CheckBox de Favorito -->
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Botón de regreso -->
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Volver"
+        android:textSize="22sp"
+        android:layout_marginTop="16dp" />
+
+</RelativeLayout>
