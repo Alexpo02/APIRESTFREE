@@ -21,14 +21,8 @@ interface AlimentoDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertAlimento(alimento: Alimento)
 
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertAlimentos(alimentos: List<Alimento>)
-
     @Query("SELECT * FROM alimentos")
     fun getAllAlimentos(): Flow<List<Alimento>>
-
-    @Query("SELECT * FROM alimentos")
-    fun getAlimentos(): List<Alimento>
 
     @Query("SELECT * FROM alimentos ORDER BY name ASC")
     fun getAlimentosOrderByName(): Flow<List<Alimento>>

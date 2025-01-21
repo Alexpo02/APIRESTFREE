@@ -34,37 +34,4 @@ class Repository(db: AlimentosDataBase, val dataSource: RemoteDataSource) {
     fun fetchAlimentosOrderByName(): Flow<List<Alimento>> {
         return localDataSource.getAlimentosOrderByName()
     }
-
-    fun fetchAlimentos(query: String): Flow<List<Alimento>> {
-        return flow {
-            var resultDB = emptyList<Alimento>()
-            try {
-                // Se intenta recuperar la información de la base de datos.
-                resultDB = localDataSource.getAlimentos()
-                // Se intenta recuperar la información de la API.
-                val resultAPI = dataSource.getAlimentoByName(query)
-                // Se compara la información de la API y la de la base de datos.
-                if (resultDB.containsAll(resultAPI)) {
-                    // Se emite el resultado.
-
-                    emit(resultDB)
-
-                } else {
-                    // Se inserta la información en la base de datos.
-
-                    localDataSource.insertAlimentos(resultAPI)
-
-                }
-                // Se recupera la información de la base de datos actualizada.
-                resultDB = localDataSource.getAlimentos()
-            } catch (e: Exception) {
-                // Se emite el error.
-                Log.e(TAG, "fetchCities: ${e.message}")
-            } finally {
-                // Se emite el resultado, ya sea de la base de datos o de la API.
-                // Una lista con datos o vacía.
-                emit(resultDB)
-            }
-        }
-    }
 }

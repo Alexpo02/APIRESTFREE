@@ -34,14 +34,6 @@ class MainViewModel(val repository: Repository) : ViewModel() {
             repository.insertAlimentoDB(alimento)
         }
     }
-
-    fun updateListAlimentos(query: String) {
-        viewModelScope.launch {
-            _currentAlimentos = if (query.isNotBlank())
-                repository.fetchAlimentoDB(query)
-            else repository.fetchAllAlimentosDB()
-        }
-    }
 }
 
 @Suppress("UNCHECKED_CAST")
